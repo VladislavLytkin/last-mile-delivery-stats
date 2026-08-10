@@ -1,0 +1,156 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/figures/
+
+# Tests and linters
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.cache/
+
+# LaTeX
+# Keep the public compiled thesis PDF; ignore build intermediates only.
+/thesis/build/
+/thesis/*.aux
+/thesis/*.bbl
+/thesis/*.bcf
+/thesis/*.blg
+/thesis/*.fdb_latexmk
+/thesis/*.fls
+/thesis/*.log
+/thesis/*.out
+/thesis/*.run.xml
+/thesis/*.synctex.gz
+/thesis/*.toc
+/thesis/*.lof
+/thesis/*.lot
+/thesis/*.nav
+/thesis/*.snm
+/thesis/*.vrb
+/thesis/*.bak
+/thesis/*.bak[0-9]*
+/thesis/indent.log
+/thesis/*.pdf
+!/thesis/main.pdf
+
+# Local data
+# Entire local data tree (includes DANO raw CSVs). data.dvc stays tracked.
+/data/
+/.dvc/cache/
+/.dvc/tmp/
+
+# Generated analysis artifacts
+# Keep only the canonical release snapshot CSVs under outputs/final/.
+/outputs/*
+!/outputs/final/
+/outputs/final/*
+!/outputs/final/*.csv
+/artifacts/
+/reports/
+/tmp/
+/temp/
+/scratch/
+/cache/
+/archive/
+/references/
+/texfiles/
+/texpage_sync/
+
+# Figures: keep only the canonical publication PDFs used by thesis/main.tex.
+# Everything else under figures/ is generated diagnostic output.
+/figures/*
+!/figures/empirical/
+/figures/empirical/*
+!/figures/empirical/hex_activity_event_time_active_share.pdf
+!/figures/empirical/cohort_composition_core_shares.pdf
+!/figures/empirical/pretrends_sch_by_cohort.pdf
+!/figures/empirical/pretrends_success_by_cohort.pdf
+!/figures/empirical/event_study_t_available_by_type.pdf
+!/figures/empirical/event_study_sch_by_type.pdf
+!/figures/empirical/event_study_meet_by_type.pdf
+!/figures/empirical/event_study_success_by_type.pdf
+!/figures/empirical/threshold_tradeoff_publication.pdf
+!/figures/empirical/event_study_utlz_by_type.pdf
+!/figures/empirical/did_threshold_sensitivity_natural_vs_common.pdf
+!/figures/empirical/cumulative_success_curves_ru.pdf
+!/figures/empirical/multi_horizon_did_common_support_ru.pdf
+!/figures/empirical/dose_coefficients_conversions.pdf
+!/figures/empirical/dose_coefficients_speed.pdf
+!/figures/empirical/dose_event_study_meet_flg.pdf
+!/figures/empirical/dose_event_study_t_available.pdf
+!/figures/empirical/workmode_delta_support.pdf
+!/figures/empirical/applications_event_time.pdf
+!/figures/empirical/active_share_event_time.pdf
+!/figures/empirical/closure_heatmap.pdf
+!/figures/empirical/closure_timing_hist.pdf
+/figures/**/*.png
+/figures/**/*.csv
+/figures/**/*.json
+/figures/**/*.parquet
+/figures/**/*.pkl
+
+# IDE
+.vscode/
+.idea/
+.agents/
+.codex/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.log
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.pem
+id_rsa
+id_rsa.pub
+credentials.json
+.dvc/config.local
+
+# Generated binary data
+*.pkl
+*.parquet
+*.feather
+*.zip
+
+# Local reference materials not distributed with the repository
+/Full_Literature_Collection.pdf
+/Критерии 2017-2018 с пояснениями.pdf
+/Список литературы/

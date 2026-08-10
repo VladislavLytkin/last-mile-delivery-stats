@@ -1,0 +1,24 @@
+section,metric,outcome,estimate,std_error,p_value,n_obs,note,ci_lower,ci_upper,n_hexagons,estimator,cluster_level,unit
+selection,n_analysis_requests_before_t_available_filter,,1807317.0,,,1807317,combined treated/control sample from build_did_samples; not the full raw dataset,,,,,,
+selection,n_with_start_interval_nonneg,,1694859.0,,,1694859,neg_dropped=0; p99=10.000,,,,,,
+selection,n_utlz_within_25_sample,utlz_within_25,1470084.0,,,1470084,H=25; maturity end=2022-10-18,,,,,,
+descriptive_decile,conversion_spread_pp,sch_flg,2.784594321457856,,,1694859,"max_decile_rate - min_decile_rate, percentage points",,,,,,
+descriptive_decile,conversion_spread_pp,meet_flg,14.835361758589126,,,1665322,"max_decile_rate - min_decile_rate, percentage points",,,,,,
+descriptive_decile,conversion_spread_pp,success_within_20,12.066024189011893,,,1482914,"max_decile_rate - min_decile_rate, percentage points",,,,,,
+descriptive_decile,conversion_spread_pp,utlz_within_25,9.732338961584885,,,1443638,"max_decile_rate - min_decile_rate, percentage points",,,,,,
+correlation,pearson_pointbiserial,sch_flg,-0.02299982596778308,,4.862588866326192e-197,1694859,association only; not causal,,,,,,
+correlation,spearman,sch_flg,-0.017386678413377373,,1.880255973501935e-113,1694859,association only; not causal,,,,,,
+correlation,pearson_pointbiserial,meet_flg,-0.10741374182920915,,0.0,1665322,association only; not causal,,,,,,
+correlation,spearman,meet_flg,-0.0774258878339514,,0.0,1665322,association only; not causal,,,,,,
+correlation,pearson_pointbiserial,success_within_20,-0.07697438730839204,,0.0,1482914,association only; not causal,,,,,,
+correlation,spearman,success_within_20,-0.06695171497995385,,0.0,1482914,association only; not causal,,,,,,
+correlation,pearson_pointbiserial,utlz_within_25,-0.058067282164073405,,0.0,1443638,association only; not causal,,,,,,
+correlation,spearman,utlz_within_25,-0.04610541345525126,,0.0,1443638,association only; not causal,,,,,,
+fe_lpm,beta_median_t_available,sch_flg,-0.001956415452827135,0.000369630837801559,1.2045406672100967e-07,487094,"PanelOLS hex+date FE, cluster hex; conditional association",-0.0026808918949181907,-0.0012319390107360796,34275.0,PanelOLS hex+date FE,hex,outcome share (0-1) per +1 day
+fe_lpm,beta_median_t_available_pp_per_day,sch_flg,-0.19564154528271352,0.0369630837801559,1.2045406672100967e-07,487094,percentage-point association per +1 day of median t_available,-0.2680891894918191,-0.12319390107360796,34275.0,PanelOLS hex+date FE,hex,percentage points per +1 day
+fe_lpm,beta_median_t_available,meet_flg,-0.022804263450935558,0.0006925095937968733,0.0,477017,"PanelOLS hex+date FE, cluster hex; conditional association",-0.02416158225477743,-0.021446944647093687,33646.0,PanelOLS hex+date FE,hex,outcome share (0-1) per +1 day
+fe_lpm,beta_median_t_available_pp_per_day,meet_flg,-2.280426345093556,0.06925095937968734,0.0,477017,percentage-point association per +1 day of median t_available,-2.416158225477743,-2.1446944647093686,33646.0,PanelOLS hex+date FE,hex,percentage points per +1 day
+fe_lpm,beta_median_t_available,success_within_20,-0.014887333696446282,0.0007993749974965918,0.0,427661,"PanelOLS hex+date FE, cluster hex; conditional association",-0.016454108691539602,-0.013320558701352962,32451.0,PanelOLS hex+date FE,hex,outcome share (0-1) per +1 day
+fe_lpm,beta_median_t_available_pp_per_day,success_within_20,-1.488733369644628,0.07993749974965918,0.0,427661,percentage-point association per +1 day of median t_available,-1.6454108691539602,-1.3320558701352962,32451.0,PanelOLS hex+date FE,hex,percentage points per +1 day
+fe_lpm,beta_median_t_available,utlz_within_25,-0.015548924260977707,0.000857886625216592,0.0,416389,"PanelOLS hex+date FE, cluster hex; conditional association",-0.017230382046402228,-0.013867466475553187,32162.0,PanelOLS hex+date FE,hex,outcome share (0-1) per +1 day
+fe_lpm,beta_median_t_available_pp_per_day,utlz_within_25,-1.5548924260977708,0.0857886625216592,0.0,416389,percentage-point association per +1 day of median t_available,-1.7230382046402228,-1.3867466475553187,32162.0,PanelOLS hex+date FE,hex,percentage points per +1 day

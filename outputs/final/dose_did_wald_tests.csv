@@ -1,0 +1,41 @@
+outcome,cohort_specification,test,formula,stat,p_value,df
+sch_flg,outcome_specific,beta_plus_zero,post_W_plus = 0,0.8325866770014911,0.36152562928391496,1
+sch_flg,outcome_specific,beta_minus_zero,post_W_minus = 0,0.00023526800029674495,0.9877621686731157,1
+sch_flg,outcome_specific,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",0.8453132569108454,0.6553036070964993,2
+sch_flg,outcome_specific,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,0.7370833015988313,0.39059680552280474,1
+meet_flg,outcome_specific,beta_plus_zero,post_W_plus = 0,15.33628626955163,8.997163909518768e-05,1
+meet_flg,outcome_specific,beta_minus_zero,post_W_minus = 0,0.01785930676385705,0.8936882667936571,1
+meet_flg,outcome_specific,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",15.818609762620742,0.0003673098157932486,2
+meet_flg,outcome_specific,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,12.823064373368698,0.00034237251846902517,1
+success_within_20,outcome_specific,beta_plus_zero,post_W_plus = 0,15.125902871761486,0.00010057381250039299,1
+success_within_20,outcome_specific,beta_minus_zero,post_W_minus = 0,3.6586874308184547,0.05577755829717901,1
+success_within_20,outcome_specific,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",20.92106928898864,2.8644914225828266e-05,2
+success_within_20,outcome_specific,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,9.996200677991864,0.00156863519767525,1
+utlz_within_25,outcome_specific,beta_plus_zero,post_W_plus = 0,7.261338058481894,0.007045477861509775,1
+utlz_within_25,outcome_specific,beta_minus_zero,post_W_minus = 0,1.1279549754176894,0.28821196701189433,1
+utlz_within_25,outcome_specific,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",7.812664143711964,0.02011414315393656,2
+utlz_within_25,outcome_specific,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,7.801690654428921,0.005219737343382658,1
+t_available,outcome_specific,beta_plus_zero,post_W_plus = 0,233.18905213902528,0.0,1
+t_available,outcome_specific,beta_minus_zero,post_W_minus = 0,4.749740497732979,0.02930271304974197,1
+t_available,outcome_specific,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",246.69035727540134,0.0,2
+t_available,outcome_specific,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,187.21951655222958,0.0,1
+sch_flg,inclusive_2022-07-27,beta_plus_zero,post_W_plus = 0,0.8325866770014911,0.36152562928391496,1
+sch_flg,inclusive_2022-07-27,beta_minus_zero,post_W_minus = 0,0.00023526800029674495,0.9877621686731157,1
+sch_flg,inclusive_2022-07-27,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",0.8453132569108454,0.6553036070964993,2
+sch_flg,inclusive_2022-07-27,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,0.7370833015988313,0.39059680552280474,1
+meet_flg,inclusive_2022-07-27,beta_plus_zero,post_W_plus = 0,12.898592942757308,0.0003288292441019358,1
+meet_flg,inclusive_2022-07-27,beta_minus_zero,post_W_minus = 0,0.12817245087164825,0.7203344809189804,1
+meet_flg,inclusive_2022-07-27,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",13.696252609787834,0.001061442650749811,2
+meet_flg,inclusive_2022-07-27,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,10.288343941362214,0.0013387318618999222,1
+success_within_20,inclusive_2022-07-27,beta_plus_zero,post_W_plus = 0,11.139570380288655,0.0008450546104760148,1
+success_within_20,inclusive_2022-07-27,beta_minus_zero,post_W_minus = 0,5.745244023347944,0.016533358584723046,1
+success_within_20,inclusive_2022-07-27,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",19.177683068743406,6.848871749443042e-05,2
+success_within_20,inclusive_2022-07-27,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,6.3344526056662875,0.011841465723483102,1
+utlz_within_25,inclusive_2022-07-27,beta_plus_zero,post_W_plus = 0,6.450452867229375,0.011092406453180992,1
+utlz_within_25,inclusive_2022-07-27,beta_minus_zero,post_W_minus = 0,0.7899096596471094,0.3741274438323803,1
+utlz_within_25,inclusive_2022-07-27,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",6.792388264449341,0.033500526219668814,2
+utlz_within_25,inclusive_2022-07-27,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,6.792224558478755,0.009155574893785268,1
+t_available,inclusive_2022-07-27,beta_plus_zero,post_W_plus = 0,233.18905213902528,0.0,1
+t_available,inclusive_2022-07-27,beta_minus_zero,post_W_minus = 0,4.749740497732979,0.02930271304974197,1
+t_available,inclusive_2022-07-27,beta_plus_and_minus_zero,"post_W_plus = 0, post_W_minus = 0",246.69035727540134,0.0,2
+t_available,inclusive_2022-07-27,symmetry_plus_plus_minus,post_W_plus + post_W_minus = 0,187.21951655222958,0.0,1

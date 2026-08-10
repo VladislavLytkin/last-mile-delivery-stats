@@ -1,0 +1,120 @@
+# latexindent config for this thesis.
+#
+# Usage (in the thesis/ directory):
+#   make fmt                                          # preferred: muted, no leftover backup
+#   latexindent -w -l -m -s main.tex                  # same thing, by hand
+#
+# Flag reference (latexindent uses Perl Getopt::Long, so flags MUST be passed
+# separately; '-wlms' is parsed as a single unknown long option '--wlms'):
+#   -w   --overwrite          rewrite the file in place (creates main.bak0)
+#   -l   --localSettings      auto-load this YAML (recognised names:
+#                             localSettings.yaml, latexindent.yaml,
+#                             .localSettings.yaml, .latexindent.yaml)
+#   -m   --modifylinebreaks   enable text wrapping (REQUIRED for column limit)
+#   -s   --silent             don't echo the formatted file to stdout
+#
+# Tip: also runs from VS Code / LaTeX Workshop on save if you set
+#   "latex-workshop.latex.tools.latexindent.args":
+#       ["-w", "-l", "-m", "-s", "%DOC%"]
+
+defaultIndent: "    "          # 4 spaces per indent level
+
+# ---------------------------------------------------------------- #
+#  Line wrapping                                                    #
+# ---------------------------------------------------------------- #
+modifyLineBreaks:
+    # Wrap body text at this column.  100 is a good compromise between
+    # diff readability on GitHub and reading comfort.
+    textWrapOptions:
+        columns: 140
+        # Reflow each paragraph: drop existing soft breaks then re-wrap
+        # at `columns`. Set to 0 if you want to keep author-controlled
+        # line breaks intact.
+        removeBlockLineBreaks: 1
+        when: before
+        multipleSpacesToSingle: 1
+        # `overflow` lets a too-long single word stick out past the
+        # column limit instead of being chopped mid-word -- correct
+        # behaviour for natural-language text.
+        huge: overflow
+
+        # Also wrap commented-out prose blocks (lines that start with `%`).
+        # Without this the wrapper leaves long commented-out drafts of
+        # paragraphs as 200+ char lines.
+        comments:
+            wrap: 1
+            inheritLeadingSpace: 1
+
+        # What may appear IMMEDIATELY BEFORE a wrappable paragraph.
+        # Default is heading / par / blankLine / \] / \item -- which
+        # MISSES paragraphs that sit right after an environment
+        # boundary like:
+        #     \begin{abstract}
+        #         <paragraph that won't get wrapped without this fix>
+        # or
+        #     \end{itemize}
+        #     <paragraph that won't get wrapped without this fix>
+        # `\begin\{[^}]*\}` and `\end\{[^}]*\}` cover both cases.
+        blocksFollow:
+            par: 1
+            blankLine: 1
+            headings: 1
+            verbatim: 1
+            filecontents: 1
+            commentOnPreviousLine: 1
+            other: '\\\]|\\item(?:\h|\[)|\\(?:begin|end)\{[^}]*\}'
+
+        # CRITICAL: what may appear as the FIRST non-whitespace char of
+        # a wrappable paragraph. The built-in A-Z / a-z flags are
+        # LATIN-only, and with no `other` regex the wrapper silently
+        # skips (no error, just no wrap):
+        #   * any Russian / Cyrillic paragraph,
+        #   * any \item that starts with a TeX command (e.g. \textbf{}),
+        #   * paragraphs that lead with $ (inline math) or "-" (typo
+        #     dashes), as e.g. lines after a display-math close \].
+        # `\S` (any non-whitespace) is the broadest reasonable choice
+        # and matches all of the above for a Russian-language thesis.
+        blocksBeginWith:
+            A-Z: 1
+            a-z: 1
+            0-9: 0
+            other: '\S'
+
+    # Don't fight the user about blank lines around environments –
+    # only collapse runs of >=3 empty lines down to 1.
+    condenseMultipleBlankLinesInto: 1
+
+    # Each of these controls when latexindent inserts / removes a
+    # newline around the corresponding token.  0 = leave alone.
+    environments:
+        BeginStartsOnOwnLine: 1
+        BodyStartsOnOwnLine:  1
+        EndStartsOnOwnLine:   1
+        EndFinishesWithLineBreak: 1
+    items:
+        ItemStartsOnOwnLine: 1
+        ItemFinishesWithLineBreak: 0
+    commands:
+        CommandStartsOnOwnLine: 0
+        CommandNameFinishesWithLineBreak: 0
+
+# ---------------------------------------------------------------- #
+#  Don't touch things where whitespace matters                      #
+# ---------------------------------------------------------------- #
+verbatimEnvironments:
+    verbatim: 1
+    Verbatim: 1
+    lstlisting: 1
+    minted: 1
+
+noAdditionalIndent:
+    document: 1
+    titlepage: 0
+    abstract: 0
+
+# Keep math display environments compact – do not re-wrap their bodies.
+lookForAlignDelims:
+    align: 1
+    align*: 1
+    aligned: 1
+    cases: 1

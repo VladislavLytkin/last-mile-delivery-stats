@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "При использовании этого репозитория процитируйте его следующим образом."
+title: "Оценка влияния изменений зон доставки на скорость доставки и конверсии встреч"
+type: software
+authors:
+  - family-names: "Lytkin"
+    given-names: "Vladislav Olegovich"
+license: MIT
+repository-code: "https://github.com/dfbakin/last-mile-delivery-stats.git"

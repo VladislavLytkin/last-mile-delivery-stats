@@ -1,0 +1,5 @@
+outcome,estimate_pp_per_day,std_error_pp_per_day,ci_lower_pp_per_day,ci_upper_pp_per_day,p_value,n_obs,n_hexagons,estimator,cluster_level,unit
+sch_flg,-0.19564154528271352,0.0369630837801559,-0.2680891894918191,-0.12319390107360796,1.2045406672100967e-07,487094,34275,PanelOLS hex+date FE,hex,percentage points per +1 day
+meet_flg,-2.280426345093556,0.06925095937968734,-2.416158225477743,-2.1446944647093686,0.0,477017,33646,PanelOLS hex+date FE,hex,percentage points per +1 day
+success_within_20,-1.488733369644628,0.07993749974965918,-1.6454108691539602,-1.3320558701352962,0.0,427661,32451,PanelOLS hex+date FE,hex,percentage points per +1 day
+utlz_within_25,-1.5548924260977708,0.0857886625216592,-1.7230382046402228,-1.3867466475553187,0.0,416389,32162,PanelOLS hex+date FE,hex,percentage points per +1 day

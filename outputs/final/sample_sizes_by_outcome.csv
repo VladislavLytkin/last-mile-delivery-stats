@@ -1,0 +1,13 @@
+outcome,change_type,n_obs,n_hexagons,n_treated_hexagons,n_treated_requests,excluded_cohorts,horizon_days,maturity_horizon
+sch_flg,region_and_workmode,102301,6160,2232,56511,,,
+sch_flg,region_only,90710,4458,530,32412,,,
+sch_flg,workmode_only,116092,5676,1748,111690,,,
+meet_flg,region_and_workmode,102247,6150,2222,56381,2022-07-27,,
+meet_flg,region_only,90710,4458,530,32412,2022-07-27,,
+meet_flg,workmode_only,113234,5553,1625,104066,2022-07-27,,
+success_within_20,region_and_workmode,91303,6105,2204,50305,2022-07-27,20.0,20.0
+success_within_20,region_only,80964,4428,527,28673,2022-07-27,20.0,20.0
+success_within_20,workmode_only,100859,5519,1618,91285,2022-07-27,20.0,20.0
+utlz_within_25,region_and_workmode,88998,6087,2199,49070,2022-07-27,25.0,25.0
+utlz_within_25,region_only,78907,4414,526,27861,2022-07-27,25.0,25.0
+utlz_within_25,workmode_only,98260,5502,1614,88857,2022-07-27,25.0,25.0
