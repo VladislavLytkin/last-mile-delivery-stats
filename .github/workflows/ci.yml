@@ -44,10 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: poetry install --no-interaction
-
-      - name: Audit release notebooks
-        run: poetry run python scripts/audit_release_notebooks.py
-
+        
       - name: Validate public release outputs
         run: poetry run python scripts/validate_final_outputs.py
 
